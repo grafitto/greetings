@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package person;
+
+service Greetings {
+  rpc getFirstName (Empty) returns (Name) {}
+}
+
+message Empty {}
+
+// This defines the message
+message Name {
+  string name = 1;
+}
